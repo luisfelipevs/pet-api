@@ -1,0 +1,8 @@
+CREATE DATABASE pet;
+
+CREATE TABLE PET (
+    id integer NOT NULL,
+    name varchar(200) NOT NULL
+)
+
+CREATE SEQUENCE PET_SEQ START 1;

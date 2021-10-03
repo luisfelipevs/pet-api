@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/pet
+    username: postgres
+    password: postgres
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+    locations:
+    - classpath:db/migrations
+    schemas:
+    - public
+    baseline-on-migrate: true
+springdoc:
+  api-docs:
+    path: /api-docs   
+server:
+  port: 8080
